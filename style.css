@@ -1,0 +1,127 @@
+*{
+    color: white;
+    font-family: 'Rubik Burned', system-ui;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #3B503D;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.turn-container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn-container h2{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.turn-container .turn-box{
+    border:  3px solid #F7F1E5;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #898121;
+    z-index: -1;
+}
+
+.score-board{
+    width: 170px;
+    height: 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.6rem;
+}
+
+.X-score, .Y-score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid #F7F1E5;
+}
+
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid #F7F1E5;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: #898121;
+}
+
+#play-again{
+    background-color: #898121;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    display: none;
+}
+
+#play-again:hover{
+    padding: 10px 40px;
+    background-color: #E7B10A;
+    color: black;
+    font-weight: 600;
+}
+
+#reset{
+    background-color: #898121;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    display: none;
+}
+
+#reset:hover{
+    padding: 10px 40px;
+    background-color: #E7B10A;
+    color: black;
+    font-weight: 600;
+}
